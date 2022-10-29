@@ -1,0 +1,2266 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>dsalgo</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c30588d3e4865eb6c631664381f105493ff8f21e/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Cucumber Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Oct 19, 2022 11:07:16</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Oct 19, 2022 11:07:16</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Oct 19, 2022 11:08:08</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>2</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='66%'>
+<b>2</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='33%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='66%'><b>2</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='33%'><b>1</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='16%'><b>56</b> steps passed</small></div>
+<div>
+<small data-tooltip='0%'><b>1</b> steps failed,
+<b>280</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@Register</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Login</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 2,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 2,
+failChild: 1,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 56,
+failGrandChild: 1,
+warningGrandChild: 0,
+skipGrandChild: 280,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@Register</a><a class="dropdown-item" href="#">@Login</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="status-avatar pass-bg">
+            <i class="fa fa-check text-white"></i>
+          </div>
+          <div class="test-detail">
+            <span class="meta text-white badge badge-sm"></span>
+            <p class="name">Feature file to register account on the website</p>
+            <p class="text-sm"><span>11:07:17 AM</span> / <span>00:07:080</span></p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<div class='float-right'><span class='badge badge-default'>#test-id=1</span></div>
+<h5 class="test-status text-pass">Feature file to register account on the website</h5>
+<span class='badge badge-success'>10.19.2022 11:07:17</span>
+<span class='badge badge-danger'>10.19.2022 11:07:24</span>
+<span class='badge badge-default'>00:07:080</span>
+</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Register the Account in the website</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Register the Account in the website</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user opens the GetStarted page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user clicks on GetStarted button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User is on the Home Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user will click on Register link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user will be navigated to the Register page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When Enter the username Sushyolloyoo and Sushmita09olyoop  and Sushmita09olyoop</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Click on register button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then The user will navigate to the Home page</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="16"
+          author=""
+          tag=""
+          device="">
+          <div class="status-avatar pass-bg">
+            <i class="fa fa-check text-white"></i>
+          </div>
+          <div class="test-detail">
+            <span class="meta text-white badge badge-sm"></span>
+            <p class="name">Feature file of Login Functionality</p>
+            <p class="text-sm"><span>11:07:24 AM</span> / <span>00:08:988</span></p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<div class='float-right'><span class='badge badge-default'>#test-id=16</span></div>
+<h5 class="test-status text-pass">Feature file of Login Functionality</h5>
+<span class='badge badge-success'>10.19.2022 11:07:24</span>
+<span class='badge badge-danger'>10.19.2022 11:07:33</span>
+<span class='badge badge-default'>00:08:988</span>
+</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="17"><span class="badge log pass-bg mr-2">Pass</span>Signin the website</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="18"><span class="badge log pass-bg mr-2">Pass</span>Signin the website</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user will be on GetStarted page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user clicks on GetStarted</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User navigated to the Home Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user is now on Home page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user clicks on the Signin</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user gets the title of the page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user enters Username as Sush and Password as Sushmita09</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And clicks on login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then user will be logged In</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="32"
+          author=""
+          tag=""
+          device="">
+          <div class="status-avatar fail-bg">
+            <i class="fa fa-times text-white"></i>
+          </div>
+          <div class="test-detail">
+            <span class="meta text-white badge badge-sm"></span>
+            <p class="name">Feature for different data stuctures validation</p>
+            <p class="text-sm"><span>11:07:33 AM</span> / <span>00:34:826</span></p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<div class='float-right'><span class='badge badge-default'>#test-id=32</span></div>
+<h5 class="test-status text-fail">Feature for different data stuctures validation</h5>
+<span class='badge badge-success'>10.19.2022 11:07:33</span>
+<span class='badge badge-danger'>10.19.2022 11:08:08</span>
+<span class='badge badge-default'>00:34:826</span>
+</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="33"><span class="badge log fail-bg mr-2">Fail</span>Operations in Stack of Stack page</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="StepDefinitions.RegisterSD.user_opens_the_get_started_page()">
+                <span>Given user opens the GetStarted page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.RegisterSD.user_clicks_on_get_started_button()">
+                <span>When user clicks on GetStarted button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.LoginSD.user_navigated_to_the_home_page()">
+                <span>Then User navigated to the Home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.LoginSD.user_is_now_on_home_page()">
+                <span>When user is now on Home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.LoginSD.user_clicks_on_the_signin()">
+                <span>And user clicks on the Signin</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.LoginSD.user_gets_the_title_of_the_page()">
+                <span>And user gets the title of the page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.LoginSD.user_enters_Username_as_uname_and_Password_as_password(java.lang.String,java.lang.String)">
+                <span>When user enters Username as Sush and Password as Sushmita09</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.LoginSD.clicks_on_login_button()">
+                <span>And clicks on login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.LoginSD.user_will_be_logged_In()">
+                <span>Then user will be logged In</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_is_now_on_HP()">
+                <span>Given user is now on HP</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_clicks_on_get_started_button_of_stack()">
+                <span>When user clicks on GetStarted button of Stack</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_is_on_stack_page()">
+                <span>Given User is on Stack page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_clicks_on_operations_in_stack()">
+                <span>When user clicks on Operations in Stack</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_must_be_navigated_to_the_operations_in_stack_page()">
+                <span>Then user must be navigated to the Operations in Stack page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_clicks_tryhere_button_of_operations_in_stack_page()">
+                <span>When user clicks tryhere button of Operations in stack page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_will_be_on_try_editor_page()">
+                <span>Then user will be on Try Editor page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_will_send_the_input()">
+                <span>When user will send the input</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.click_run()">
+                <span>And click run</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.display_the_output()">
+                <span>Then display the output</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.navigate_back_to_stack_page()">
+                <span>Then navigate back to Stack page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_will_be_on_stack_page()">
+                <span>Given user will be on Stack page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_clicks_on_implementation_link()">
+                <span>When user clicks on Implementation link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_will_be_navigated_to_the_implementation_page()">
+                <span>Then user will be navigated to the Implementation page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_clicks_on_try_here_button_of_implentation_page()">
+                <span>When user clicks on Try here button of Implentation page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_is_on_try_editor_page()">
+                <span>Then user is on TryEditor page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_will_send_the_data_as_input_and_click_run()">
+                <span>When user will send the data as input and click run</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_will_display_the_output_on_the_console()">
+                <span>Then user will display the output on the console</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_will_navigate_to_stack_page()">
+                <span>Then user will navigate to Stack page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_is_now_on_page_stack()">
+                <span>Given user is now on page Stack</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_clicks_on_applications_link()">
+                <span>When user clicks on Applications link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_is_now_on_applications_page()">
+                <span>Then user is now on Applications page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_will_click_on_try_here_button()">
+                <span>When user will click on Try Here button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_will_execute_try_editor_page()">
+                <span>When user will execute try editor page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.will_get_the_output_on_the_console()">
+                <span>Then will get the output on the console</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_will_navigate_to_home_page()">
+                <span>Then user will navigate to Home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_is_now_on_home_page()">
+                <span>Given user is now on home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_clicks_on_get_started_button_of_queue()">
+                <span>When user clicks on GetStarted button of Queue</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="StepDefinitions.Integrate.user_will_be_navigated_to_queue_page()">
+                <span>Then user will be navigated to Queue page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="StepDefinitions.Integrate.user_clicks_on_implimentation_of_queue_in_python()">
+                <span>When user clicks on Implimentation of Queue in python</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='implementation-list']"}
+  (Session info: chrome=106.0.5249.119)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-EOOD945', ip: '192.168.1.92', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e54d24c45ecc26151007d934f9b001e2, findElement {using=xpath, value=//a[@href='implementation-list']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\Arivoli\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63579}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63579/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e54d24c45ecc26151007d934f9b001e2
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.click(Unknown Source)
+	at pageObjects.QueuePage.clickImplimentationofQueueinPython(QueuePage.java:41)
+	at StepDefinitions.Integrate.user_clicks_on_implimentation_of_queue_in_python(Integrate.java:304)
+	at ✽.user clicks on Implimentation of Queue in python(file:///C:/Users/Arivoli/eclipse-workspace/ds-Algo/src/test/resources/Features/Integrate.feature:60)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_be_navigated_to_implimentation_of_queue_in_python_page()">
+                <span>Then user will be navigated to Implimentation of Queue in python page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_try_button()">
+                <span>When user clicks on try button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_send_the_input_and_click_run()">
+                <span>Then user will send the input and click run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_get_the_output_displayed_on_console()">
+                <span>Then user will get the output displayed on console</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_be_navigated_back_to_queue_page()">
+                <span>Then user will be navigated back to Queue page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_be_on_queue_page()">
+                <span>Given user will be on Queue page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_click_on_implementation_using_collections_dequeue()">
+                <span>When user will click on Implementation using collections dequeue</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_be_navigated_to_implementation_using_collections_dequeue_page()">
+                <span>Then user will be navigated to Implementation using collections dequeue page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_click_on_try_here_button_of_collections_dequeue_page()">
+                <span>When user  will click on Try here button of Collections dequeue page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_be_navigated_to_the_try_editor_page()">
+                <span>Then user will be navigated to the Try Editor page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_give_the_input_and_click_run()">
+                <span>When user will give the input and click run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_display_output()">
+                <span>Then user will display output</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_navigate_to_queue_page()">
+                <span>Then user will navigate to Queue page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_queue_page()">
+                <span>Given user is on Queue page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_click_on_implementation_using_array()">
+                <span>When user will click on Implementation using Array</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_be_navigated_to_the_implementation_using_array_page()">
+                <span>Then user will be navigated to the Implementation Using Array page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.click_on_try_here_button()">
+                <span>When click on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_navigated_to_the_try_editor_page()">
+                <span>Then user is navigated to the Try Editor page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_give_input_data_and_click_run()">
+                <span>When user give input data and click run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_receive_output_and_display_the_output()">
+                <span>Then user will receive output and display the output</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_navigates_back_to_queue_page()">
+                <span>Then user navigates back to Queue page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_now_on_queue_page()">
+                <span>Given user is now on Queue page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_click_on_queue_operations()">
+                <span>When user will click on Queue Operations</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_navigated_to_queue_operations_page()">
+                <span>Then user is navigated to Queue Operations page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_click_on_try_here_button_on_queue_opearations_page()">
+                <span>When user will click on Try here button on Queue Opearations page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_be_on_tryeditor_page()">
+                <span>Then user will be on Tryeditor page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_send_input_and_clicks_run()">
+                <span>Then user will send input and clicks run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_get_the_output_and_displayed_on_console()">
+                <span>Then user will get the output and displayed on console</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_be_navigated_to_the_home_page()">
+                <span>Then user will be navigated to the Home page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_home_page()">
+                <span>Given user is on home page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_data_structures_intro_get_started_button()">
+                <span>When user clicks on DataStructuresIntro get started button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_data_structure_intro_page()">
+                <span>Then user is on DataStructureIntro page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_time_complexity_button()">
+                <span>And user clicks on Time Complexity button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_time_complexity_page()">
+                <span>Then user is on Time complexity page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_try_here_button()">
+                <span>And user clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_editor_page()">
+                <span>Then user is on Editor page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enters_python_code_and_clicks_run_button_and_gets_output()">
+                <span>And user enters python code and clicks Run button and gets output</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_navigates_back_to_HomePage_from_Editor()">
+                <span>Then user navigates back to HomePage from Editor</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_home_page()">
+                <span>Given user is on home page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_data_structures_intro_get_started_button()">
+                <span>When user clicks on DataStructuresIntro get started button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_data_structure_intro_page()">
+                <span>Then user is on DataStructureIntro page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_time_complexity_button()">
+                <span>And user clicks on Time Complexity button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_time_complexity_page()">
+                <span>Then user is on Time complexity page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_practice_questions_button()">
+                <span>And user clicks on Practice Questions button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_practice_questions_page()">
+                <span>Then user is on Practice Questions page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_navigates_back_to_home_page_from_practice_questions()">
+                <span>Then user navigates back to HomePage from PracticeQuestions</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_home_page()">
+                <span>Given user is on home page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_array_get_started_button()">
+                <span>When user clicks on Array get started button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_array_page()">
+                <span>Then user is on Array page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_arrays_in_python_button()">
+                <span>And user clicks on Arrays in Python button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_arrays_in_python_page()">
+                <span>Then user is on Arrays in Python page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_try_here_button()">
+                <span>And user clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_editor_page()">
+                <span>Then user is on Editor page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enters_python_code_and_clicks_run_button_and_gets_output()">
+                <span>And user enters python code and clicks Run button and gets output</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_navigates_back_to_HomePage_from_Editor()">
+                <span>Then user navigates back to HomePage from Editor</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_home_page()">
+                <span>Given user is on home page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_array_get_started_button()">
+                <span>When user clicks on Array get started button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_array_page()">
+                <span>Then user is on Array page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_arrays_using_list_button()">
+                <span>And user clicks on Arrays using List button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_arrays_using_list_page()">
+                <span>Then user is on Arrays using List page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_try_here_button()">
+                <span>And user clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_editor_page()">
+                <span>Then user is on Editor page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enters_python_code_and_clicks_run_button_and_gets_output()">
+                <span>And user enters python code and clicks Run button and gets output</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_navigates_back_to_HomePage_from_Editor()">
+                <span>Then user navigates back to HomePage from Editor</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_home_page()">
+                <span>Given user is on home page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_array_get_started_button()">
+                <span>When user clicks on Array get started button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_array_page()">
+                <span>Then user is on Array page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_basic_operations_in_list_button()">
+                <span>And user clicks on Basic Operations in List button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_basic_operations_in_list_page()">
+                <span>Then user is on Basic Operations in List page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_try_here_button()">
+                <span>And user clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_editor_page()">
+                <span>Then user is on Editor page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enters_python_code_and_clicks_run_button_and_gets_output()">
+                <span>And user enters python code and clicks Run button and gets output</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_navigates_back_to_HomePage_from_Editor()">
+                <span>Then user navigates back to HomePage from Editor</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_home_page()">
+                <span>Given user is on home page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_array_get_started_button()">
+                <span>When user clicks on Array get started button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_array_page()">
+                <span>Then user is on Array page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_applications_of_array_button()">
+                <span>And user clicks on Applications of Array button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_applications_of_array_page()">
+                <span>Then user is on Applications of Array page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_try_here_button()">
+                <span>And user clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_editor_page()">
+                <span>Then user is on Editor page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enters_python_code_and_clicks_run_button_and_gets_output()">
+                <span>And user enters python code and clicks Run button and gets output</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_navigates_back_to_HomePage_from_Editor()">
+                <span>Then user navigates back to HomePage from Editor</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_home_page()">
+                <span>Given user is on home page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_array_get_started_button()">
+                <span>When user clicks on Array get started button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_array_page()">
+                <span>Then user is on Array page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_applications_of_array_button()">
+                <span>And user clicks on Applications of Array button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_applications_of_array_page()">
+                <span>Then user is on Applications of Array page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_practice_questions_button()">
+                <span>And user clicks on Practice Questions button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_practice_questions_page()">
+                <span>Then user is on Practice Questions page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_search_the_array_button_in_practice()">
+                <span>And user clicks on Search the Array button in Practice</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_question_one_page_in_practice()">
+                <span>Then user is on question one page in Practice</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enters_python_code_and_clicks_submit_button_and_gets_output()">
+                <span>And user enters python code and clicks Submit button and gets output</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_navigates_back_to_practice_page()">
+                <span>Then user navigates back to Practice page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_max_consecutive_ones_button_in_practice()">
+                <span>And user clicks on Max Consecutive Ones button in Practice</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_question_two_page_in_practice()">
+                <span>Then user is on question two page in Practice</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enters_python_code_and_clicks_submit_button_and_gets_output()">
+                <span>And user enters python code and clicks Submit button and gets output</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_navigates_back_to_practice_page()">
+                <span>Then user navigates back to Practice page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_find_numbers_with_even_number_of_digits_button_in_practice()">
+                <span>And user clicks on Find Numbers with Even Number of Digits button in Practice</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_question_three_page_in_practice()">
+                <span>Then user is on question three page in Practice</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enters_python_code_and_clicks_submit_button_and_gets_output()">
+                <span>And user enters python code and clicks Submit button and gets output</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_navigates_back_to_practice_page()">
+                <span>Then user navigates back to Practice page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_squares_of_a_sorted_array_button_in_practice()">
+                <span>And user clicks on Squares of a Sorted Array button in Practice</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_question_four_page_in_practice()">
+                <span>Then user is on question four page in Practice</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enters_python_code_and_clicks_submit_button_and_gets_output()">
+                <span>And user enters python code and clicks Submit button and gets output</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_navigates_back_to_practice_page()">
+                <span>Then user navigates back to Practice page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_navigates_back_to_HomePage_from_Editor()">
+                <span>Then user navigates back to HomePage from Editor</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_home_page()">
+                <span>Given user is on home page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_graph_get_started_button()">
+                <span>When user clicks on Graph Get Started button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_to_graph_page()">
+                <span>Then user should navigate to Graph page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clikcs_on_graph()">
+                <span>And user clikcs on Graph</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_try_here_button()">
+                <span>Then clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enter_input()">
+                <span>Then user enter input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.click_on_run()">
+                <span>And click on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.Then_it_should_display_entered_input()">
+                <span>Then it should display entered input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page()">
+                <span>Then user go back to Topic Covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_graph_Topic_covered_page()">
+                <span>Given user is on graph Topic covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clikcs_on_Graph_Representations()">
+                <span>When user clikcs on Graph Representations</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_try_here_button()">
+                <span>Then clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enter_input()">
+                <span>Then user enter input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.click_on_run()">
+                <span>And click on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.Then_it_should_display_entered_input()">
+                <span>Then it should display entered input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_navigate_back_to_home_page()">
+                <span>Then user navigate back to Home Page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_home_page()">
+                <span>Given user is on home page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_tree_get_started_button()">
+                <span>Then user clicks on Tree GetStarted button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_to_tree_page()">
+                <span>Then user should navigate to Tree page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clikcs_on_overview_of_trees()">
+                <span>And user clikcs on overview of Trees</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_try_here_button()">
+                <span>Then clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enter_input()">
+                <span>Then user enter input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.click_on_run()">
+                <span>And click on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.Then_it_should_display_entered_input()">
+                <span>Then it should display entered input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page()">
+                <span>Then user go back to Topic Covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_tree_topic_covered_page()">
+                <span>Given user is on Tree Topic covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clikcs_on_terminologies()">
+                <span>When user clikcs on Terminologies</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_try_here_button()">
+                <span>Then clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enter_input()">
+                <span>Then user enter input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.click_on_run()">
+                <span>And click on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.Then_it_should_display_entered_input()">
+                <span>Then it should display entered input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page()">
+                <span>Then user go back to Topic Covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_tree_topic_covered_page()">
+                <span>Given user is on Tree Topic covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clikcs_on_types_of_trees()">
+                <span>When user clikcs on Types of Trees</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_try_here_button()">
+                <span>Then clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enter_input()">
+                <span>Then user enter input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.click_on_run()">
+                <span>And click on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.Then_it_should_display_entered_input()">
+                <span>Then it should display entered input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page()">
+                <span>Then user go back to Topic Covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_tree_topic_covered_page()">
+                <span>Given user is on Tree Topic covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clikcs_on_tree_traversals()">
+                <span>When user clikcs on Tree Traversals</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_try_here_button()">
+                <span>Then clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enter_input()">
+                <span>Then user enter input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.click_on_run()">
+                <span>And click on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.Then_it_should_display_entered_input()">
+                <span>Then it should display entered input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page()">
+                <span>Then user go back to Topic Covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_tree_topic_covered_page()">
+                <span>Given user is on Tree Topic covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clikcs_on_traversals_illustration()">
+                <span>When user clikcs on Traversals-Illustration</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_try_here_button()">
+                <span>Then clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enter_input()">
+                <span>Then user enter input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.click_on_run()">
+                <span>And click on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.Then_it_should_display_entered_input()">
+                <span>Then it should display entered input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page()">
+                <span>Then user go back to Topic Covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_tree_topic_covered_page()">
+                <span>Given user is on Tree Topic covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clikcs_on_binary_trees()">
+                <span>When user clikcs on Binary Trees</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_try_here_button()">
+                <span>Then clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enter_input()">
+                <span>Then user enter input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.click_on_run()">
+                <span>And click on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.Then_it_should_display_entered_input()">
+                <span>Then it should display entered input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page()">
+                <span>Then user go back to Topic Covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_tree_topic_covered_page()">
+                <span>Given user is on Tree Topic covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clikcs_on_types_of_binary_trees()">
+                <span>When user clikcs on Types of Binary Trees</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_try_here_button()">
+                <span>Then clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enter_input()">
+                <span>Then user enter input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.click_on_run()">
+                <span>And click on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.Then_it_should_display_entered_input()">
+                <span>Then it should display entered input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page()">
+                <span>Then user go back to Topic Covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_tree_topic_covered_page()">
+                <span>Given user is on Tree Topic covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clikcs_on_implementation_in_python()">
+                <span>When user clikcs on Implementation in Python</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_try_here_button()">
+                <span>Then clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enter_input()">
+                <span>Then user enter input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.click_on_run()">
+                <span>And click on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.Then_it_should_display_entered_input()">
+                <span>Then it should display entered input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page()">
+                <span>Then user go back to Topic Covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_tree_topic_covered_page()">
+                <span>Given user is on Tree Topic covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clikcs_on_binary_tree_traversals()">
+                <span>When user clikcs on Binary Tree Traversals</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_try_here_button()">
+                <span>Then clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enter_input()">
+                <span>Then user enter input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.click_on_run()">
+                <span>And click on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.Then_it_should_display_entered_input()">
+                <span>Then it should display entered input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page()">
+                <span>Then user go back to Topic Covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_tree_topic_covered_page()">
+                <span>Given user is on Tree Topic covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clikcs_on_implementation_of_binary_trees()">
+                <span>When user clikcs on Implementation of Binary Trees</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_try_here_button()">
+                <span>Then clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enter_input()">
+                <span>Then user enter input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.click_on_run()">
+                <span>And click on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.Then_it_should_display_entered_input()">
+                <span>Then it should display entered input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page()">
+                <span>Then user go back to Topic Covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_tree_topic_covered_page()">
+                <span>Given user is on Tree Topic covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clikcs_on_applications_of_binary_trees()">
+                <span>When user clikcs on Applications of Binary trees</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_try_here_button()">
+                <span>Then clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enter_input()">
+                <span>Then user enter input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.click_on_run()">
+                <span>And click on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.Then_it_should_display_entered_input()">
+                <span>Then it should display entered input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page()">
+                <span>Then user go back to Topic Covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_tree_topic_covered_page()">
+                <span>Given user is on Tree Topic covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clikcs_on_binary_search_trees()">
+                <span>When user clikcs on Binary Search Trees</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_try_here_button()">
+                <span>Then clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enter_input()">
+                <span>Then user enter input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.click_on_run()">
+                <span>And click on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.Then_it_should_display_entered_input()">
+                <span>Then it should display entered input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page()">
+                <span>Then user go back to Topic Covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_tree_topic_covered_page()">
+                <span>Given user is on Tree Topic covered page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clikcs_on_implementation_of_bst()">
+                <span>When user clikcs on Implementation Of BST</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_try_here_button()">
+                <span>Then clicks on Try here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enter_input()">
+                <span>Then user enter input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.click_on_run()">
+                <span>And click on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.Then_it_should_display_entered_input()">
+                <span>Then it should display entered input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_navigate_back_to_home_page()">
+                <span>Then user navigate back to Home Page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_is_on_the_home_page()">
+                <span>Given user is on the home page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_GetStarted_button_for_LinkedList()">
+                <span>When user clicks on GetStarted button for LinkedList</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_to_LinkedList_page()">
+                <span>Then user should navigate to LinkedList page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_Introduction_link()">
+                <span>When user clicks on Introduction link</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_to_LinkedList_Subpage()">
+                <span>Then user should navigate to Linkedlist Subpage</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_Try_Here_button()">
+                <span>When user clicks on Try Here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_tryEditor_page()">
+                <span>Then user should navigate to tryEditor page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enters_input()">
+                <span>When user enters input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_Run()">
+                <span>And clicks on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_see_result_of_code()">
+                <span>Then user should see result of code</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_go_back_button()">
+                <span>When user clicks on go back button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_to_LinkedList_Subpage()">
+                <span>Then user should navigate to Linkedlist Subpage</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_Creating_a_LinkedList_link()">
+                <span>When user clicks on Creating a LinkedList link</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_Try_Here_button()">
+                <span>And user clicks on Try Here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_tryEditor_page()">
+                <span>Then user should navigate to tryEditor page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enters_input()">
+                <span>When user enters input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_Run()">
+                <span>And clicks on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_see_result_of_code()">
+                <span>Then user should see result of code</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_go_back_button()">
+                <span>When user clicks on go back button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_to_LinkedList_Subpage()">
+                <span>Then user should navigate to Linkedlist Subpage</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_Types_of_Linked_List_link()">
+                <span>When user clicks on Types of Linked List link</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_Try_Here_button()">
+                <span>And user clicks on Try Here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_tryEditor_page()">
+                <span>Then user should navigate to tryEditor page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enters_input()">
+                <span>When user enters input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_Run()">
+                <span>And clicks on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_see_result_of_code()">
+                <span>Then user should see result of code</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_go_back_button()">
+                <span>When user clicks on go back button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_to_LinkedList_Subpage()">
+                <span>Then user should navigate to Linkedlist Subpage</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_Implement_Linked_List_in_Python_link()">
+                <span>When user clicks on Implement Linked List in Python link</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_Try_Here_button()">
+                <span>And user clicks on Try Here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_tryEditor_page()">
+                <span>Then user should navigate to tryEditor page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enters_input()">
+                <span>When user enters input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_Run()">
+                <span>And clicks on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_see_result_of_code()">
+                <span>Then user should see result of code</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_go_back_button()">
+                <span>When user clicks on go back button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_to_LinkedList_Subpage()">
+                <span>Then user should navigate to Linkedlist Subpage</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_Traversal_link()">
+                <span>When user clicks on Traversal link</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_Try_Here_button()">
+                <span>And user clicks on Try Here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_tryEditor_page()">
+                <span>Then user should navigate to tryEditor page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enters_input()">
+                <span>When user enters input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_Run()">
+                <span>And clicks on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_see_result_of_code()">
+                <span>Then user should see result of code</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_go_back_button()">
+                <span>When user clicks on go back button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_to_LinkedList_Subpage()">
+                <span>Then user should navigate to Linkedlist Subpage</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_Insertion_link()">
+                <span>When user clicks on Insertion link</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_Try_Here_button()">
+                <span>And user clicks on Try Here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_tryEditor_page()">
+                <span>Then user should navigate to tryEditor page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enters_input()">
+                <span>When user enters input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_Run()">
+                <span>And clicks on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_see_result_of_code()">
+                <span>Then user should see result of code</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_go_back_button()">
+                <span>When user clicks on go back button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_to_LinkedList_Subpage()">
+                <span>Then user should navigate to Linkedlist Subpage</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_Deletion_link()">
+                <span>When user clicks on Deletion link</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_Try_Here_button()">
+                <span>And user clicks on Try Here button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_tryEditor_page()">
+                <span>Then user should navigate to tryEditor page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_enters_input()">
+                <span>When user enters input</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.clicks_on_Run()">
+                <span>And clicks on Run</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_see_result_of_code()">
+                <span>Then user should see result of code</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_go_back_button()">
+                <span>When user clicks on go back button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_to_LinkedList_Subpage()">
+                <span>Then user should navigate to Linkedlist Subpage</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_on_Practice_Questions_link()">
+                <span>When user clicks on Practice Questions link</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_to_Practice_Questions_page()">
+                <span>Then user should navigate to Practice Questions page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_clicks_NumpyNinja_link()">
+                <span>When user clicks NumpyNinja link</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_should_navigate_to_home_page()">
+                <span>Then user should navigate to home page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="StepDefinitions.Integrate.user_will_click_on_signout_button()">
+                <span>Then user will click on Signout button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>StepDefinitions.Hooks.takeScreenshotonFailure(io.cucumber.java.Scenario)</span>
+      <div>screenshot
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded1.png' src="../embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@Register</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Register</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:07:17 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Register the Account in the website</a>
+<div class="">
+<span class="badge badge-default">Feature file to register account on the website.Register the Account in the website</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:07:17 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Register the Account in the website</a>
+<div class="">
+<span class="badge badge-default">Feature file to register account on the website.Register the Account in the website</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@Login</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Login</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:07:24 AM</td>
+<td>
+<a href="#" class="linked" test-id='16' id='17'>Signin the website</a>
+<div class="">
+<span class="badge badge-default">Feature file of Login Functionality.Signin the website</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:07:24 AM</td>
+<td>
+<a href="#" class="linked" test-id='16' id='18'>Signin the website</a>
+<div class="">
+<span class="badge badge-default">Feature file of Login Functionality.Signin the website</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:07:57 AM</td>
+<td>
+<a href="#" class="linked" test-id='32' id='74'>When user clicks on Implimentation of Queue in python</a>
+<div class="">
+<span class="badge badge-default">Feature for different data stuctures validation.Operations in Stack of Stack page.When user clicks on Implimentation of Queue in python</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@5cf22a596531402644b8523470526952516f345f/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

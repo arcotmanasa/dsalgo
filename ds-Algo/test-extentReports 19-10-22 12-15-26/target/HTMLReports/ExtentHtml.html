@@ -1,0 +1,2210 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM dd, yyyy HH:mm:ss'/>
+	
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>dsalgo</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+        <a href="#!" class="brand-logo black"><img src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>Cucumber Report</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Oct 19, 2022 12:15:26</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@Register</a></li>
+					<li><a href='#'>@Login</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Features</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
+                    <span class='strong'>3</span> features passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Scenarios</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>3</span> scenarios passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='grandchild-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>336</span> steps passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Feature file to register account on the website</span>
+						<span class='test-time'>Oct 19, 2022 12:15:27</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario outline node' test-id='2' status='pass'>
+
+	<span class='duration right label'>00 00 07.007</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Register the Account in the website</div>
+	</div>
+	
+		<div class='node-desc'><table class='markup-table table '><tr><td>uname</td><td>password</td><td>confpassword</td></tr><tr><td>Sushyolloyoo</td><td>Sushmita09olyoop</td><td>Sushmita09olyoop</td></tr></table></div>
+	
+		<div class='category-list'>
+				<span class='category label'>@Register</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='3' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Register the Account in the website</div>
+
+				<div class='category-list'>
+						<span class='category label'>@Register</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='6' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="StepDefinitions.RegisterSD.user_opens_the_get_started_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user opens the GetStarted page</h6>
+
+				</li>
+				<li test-id='7' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="StepDefinitions.RegisterSD.user_clicks_on_get_started_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on GetStarted button</h6>
+
+				</li>
+				<li test-id='8' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="StepDefinitions.RegisterSD.user_is_on_the_home_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User is on the Home Page</h6>
+
+				</li>
+				<li test-id='9' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="StepDefinitions.RegisterSD.user_will_click_on_register_link()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user will click on Register link</h6>
+
+				</li>
+				<li test-id='10' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="StepDefinitions.RegisterSD.user_will_be_navigated_to_the_register_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will be navigated to the Register page</h6>
+
+				</li>
+				<li test-id='11' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="StepDefinitions.RegisterSD.enter_the_username_uname_and_password_and_confpassword(java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter the username Sushyolloyoo and Sushmita09olyoop  and Sushmita09olyoop</h6>
+
+				</li>
+				<li test-id='12' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="StepDefinitions.RegisterSD.click_on_register_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Click on register button</h6>
+
+				</li>
+				<li test-id='13' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="StepDefinitions.RegisterSD.the_user_will_navigate_to_the_Home_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The user will navigate to the Home page</h6>
+
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>Feature file of Login Functionality</span>
+						<span class='test-time'>Oct 19, 2022 12:15:34</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario outline node' test-id='17' status='pass'>
+
+	<span class='duration right label'>00 00 08.078</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Signin the website</div>
+	</div>
+	
+		<div class='node-desc'><table class='markup-table table '><tr><td>uname</td><td>password</td></tr><tr><td>Sush</td><td>Sushmita09</td></tr></table></div>
+	
+		<div class='category-list'>
+				<span class='category label'>@Login</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='18' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Signin the website</div>
+
+				<div class='category-list'>
+						<span class='category label'>@Login</span>
+				</div>
+
+			<ul class='gc steps'>
+				<li test-id='21' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="StepDefinitions.LoginSD.user_will_be_on_get_started_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user will be on GetStarted page</h6>
+
+				</li>
+				<li test-id='22' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="StepDefinitions.LoginSD.user_clicks_on_getstarted()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on GetStarted</h6>
+
+				</li>
+				<li test-id='23' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="StepDefinitions.LoginSD.user_navigated_to_the_home_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User navigated to the Home Page</h6>
+
+				</li>
+				<li test-id='24' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="StepDefinitions.LoginSD.user_is_now_on_home_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user is now on Home page</h6>
+
+				</li>
+				<li test-id='25' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="StepDefinitions.LoginSD.user_clicks_on_the_signin()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on the Signin</h6>
+
+				</li>
+				<li test-id='26' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="StepDefinitions.LoginSD.user_gets_the_title_of_the_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user gets the title of the page</h6>
+
+				</li>
+				<li test-id='27' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="StepDefinitions.LoginSD.user_enters_Username_as_uname_and_Password_as_password(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user enters Username as Sush and Password as Sushmita09</h6>
+
+				</li>
+				<li test-id='28' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="StepDefinitions.LoginSD.clicks_on_login_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clicks on login button</h6>
+
+				</li>
+				<li test-id='29' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="StepDefinitions.LoginSD.user_will_be_logged_In()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will be logged In</h6>
+
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='32'>
+					<div class='test-heading'>
+						<span class='test-name'>Feature for different data stuctures validation</span>
+						<span class='test-time'>Oct 19, 2022 12:15:43</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='33' status='pass'>
+
+	<span class='duration right label'>00 01 34.613</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Operations in Stack of Stack page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='36' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.RegisterSD.user_opens_the_get_started_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user opens the GetStarted page</div>
+
+
+		</li>
+		<li test-id='37' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.RegisterSD.user_clicks_on_get_started_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on GetStarted button</div>
+
+
+		</li>
+		<li test-id='38' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.LoginSD.user_navigated_to_the_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User navigated to the Home Page</div>
+
+
+		</li>
+		<li test-id='39' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.LoginSD.user_is_now_on_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user is now on Home page</div>
+
+
+		</li>
+		<li test-id='40' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.LoginSD.user_clicks_on_the_signin())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on the Signin</div>
+
+
+		</li>
+		<li test-id='41' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.LoginSD.user_gets_the_title_of_the_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user gets the title of the page</div>
+
+
+		</li>
+		<li test-id='42' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.LoginSD.user_enters_Username_as_uname_and_Password_as_password(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user enters Username as Sush and Password as Sushmita09</div>
+
+
+		</li>
+		<li test-id='43' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.LoginSD.clicks_on_login_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clicks on login button</div>
+
+
+		</li>
+		<li test-id='44' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.LoginSD.user_will_be_logged_In())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will be logged In</div>
+
+
+		</li>
+		<li test-id='45' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_now_on_HP())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is now on HP</div>
+
+
+		</li>
+		<li test-id='46' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_get_started_button_of_stack())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on GetStarted button of Stack</div>
+
+
+		</li>
+		<li test-id='47' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_stack_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on Stack page</div>
+
+
+		</li>
+		<li test-id='48' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_operations_in_stack())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Operations in Stack</div>
+
+
+		</li>
+		<li test-id='49' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_must_be_navigated_to_the_operations_in_stack_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user must be navigated to the Operations in Stack page</div>
+
+
+		</li>
+		<li test-id='50' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_tryhere_button_of_operations_in_stack_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks tryhere button of Operations in stack page</div>
+
+
+		</li>
+		<li test-id='51' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_be_on_try_editor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will be on Try Editor page</div>
+
+
+		</li>
+		<li test-id='52' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_send_the_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user will send the input</div>
+
+
+		</li>
+		<li test-id='53' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.click_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click run</div>
+
+
+		</li>
+		<li test-id='54' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.display_the_output())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then display the output</div>
+
+
+		</li>
+		<li test-id='55' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.navigate_back_to_stack_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then navigate back to Stack page</div>
+
+
+		</li>
+		<li test-id='56' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_be_on_stack_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user will be on Stack page</div>
+
+
+		</li>
+		<li test-id='57' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_implementation_link())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Implementation link</div>
+
+
+		</li>
+		<li test-id='58' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_be_navigated_to_the_implementation_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will be navigated to the Implementation page</div>
+
+
+		</li>
+		<li test-id='59' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_try_here_button_of_implentation_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Try here button of Implentation page</div>
+
+
+		</li>
+		<li test-id='60' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_try_editor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on TryEditor page</div>
+
+
+		</li>
+		<li test-id='61' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_send_the_data_as_input_and_click_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user will send the data as input and click run</div>
+
+
+		</li>
+		<li test-id='62' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_display_the_output_on_the_console())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will display the output on the console</div>
+
+
+		</li>
+		<li test-id='63' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_navigate_to_stack_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will navigate to Stack page</div>
+
+
+		</li>
+		<li test-id='64' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_now_on_page_stack())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is now on page Stack</div>
+
+
+		</li>
+		<li test-id='65' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_applications_link())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Applications link</div>
+
+
+		</li>
+		<li test-id='66' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_now_on_applications_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is now on Applications page</div>
+
+
+		</li>
+		<li test-id='67' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_click_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user will click on Try Here button</div>
+
+
+		</li>
+		<li test-id='68' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_execute_try_editor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user will execute try editor page</div>
+
+
+		</li>
+		<li test-id='69' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.will_get_the_output_on_the_console())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then will get the output on the console</div>
+
+
+		</li>
+		<li test-id='70' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_navigate_to_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will navigate to Home page</div>
+
+
+		</li>
+		<li test-id='71' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_now_on_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is now on home page</div>
+
+
+		</li>
+		<li test-id='72' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_get_started_button_of_queue())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on GetStarted button of Queue</div>
+
+
+		</li>
+		<li test-id='73' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_be_navigated_to_queue_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will be navigated to Queue page</div>
+
+
+		</li>
+		<li test-id='74' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_implimentation_of_queue_in_python())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Implimentation of Queue in python</div>
+
+
+		</li>
+		<li test-id='75' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_be_navigated_to_implimentation_of_queue_in_python_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will be navigated to Implimentation of Queue in python page</div>
+
+
+		</li>
+		<li test-id='76' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_try_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on try button</div>
+
+
+		</li>
+		<li test-id='77' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_send_the_input_and_click_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will send the input and click run</div>
+
+
+		</li>
+		<li test-id='78' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_get_the_output_displayed_on_console())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will get the output displayed on console</div>
+
+
+		</li>
+		<li test-id='79' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_be_navigated_back_to_queue_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will be navigated back to Queue page</div>
+
+
+		</li>
+		<li test-id='80' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_be_on_queue_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user will be on Queue page</div>
+
+
+		</li>
+		<li test-id='81' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_click_on_implementation_using_collections_dequeue())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user will click on Implementation using collections dequeue</div>
+
+
+		</li>
+		<li test-id='82' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_be_navigated_to_implementation_using_collections_dequeue_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will be navigated to Implementation using collections dequeue page</div>
+
+
+		</li>
+		<li test-id='83' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_click_on_try_here_button_of_collections_dequeue_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user  will click on Try here button of Collections dequeue page</div>
+
+
+		</li>
+		<li test-id='84' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_be_navigated_to_the_try_editor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will be navigated to the Try Editor page</div>
+
+
+		</li>
+		<li test-id='85' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_give_the_input_and_click_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user will give the input and click run</div>
+
+
+		</li>
+		<li test-id='86' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_display_output())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will display output</div>
+
+
+		</li>
+		<li test-id='87' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_navigate_to_queue_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will navigate to Queue page</div>
+
+
+		</li>
+		<li test-id='88' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_queue_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on Queue page</div>
+
+
+		</li>
+		<li test-id='89' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_click_on_implementation_using_array())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user will click on Implementation using Array</div>
+
+
+		</li>
+		<li test-id='90' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_be_navigated_to_the_implementation_using_array_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will be navigated to the Implementation Using Array page</div>
+
+
+		</li>
+		<li test-id='91' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.click_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When click on Try here button</div>
+
+
+		</li>
+		<li test-id='92' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_navigated_to_the_try_editor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is navigated to the Try Editor page</div>
+
+
+		</li>
+		<li test-id='93' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_give_input_data_and_click_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user give input data and click run</div>
+
+
+		</li>
+		<li test-id='94' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_receive_output_and_display_the_output())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will receive output and display the output</div>
+
+
+		</li>
+		<li test-id='95' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_navigates_back_to_queue_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user navigates back to Queue page</div>
+
+
+		</li>
+		<li test-id='96' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_now_on_queue_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is now on Queue page</div>
+
+
+		</li>
+		<li test-id='97' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_click_on_queue_operations())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user will click on Queue Operations</div>
+
+
+		</li>
+		<li test-id='98' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_navigated_to_queue_operations_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is navigated to Queue Operations page</div>
+
+
+		</li>
+		<li test-id='99' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_click_on_try_here_button_on_queue_opearations_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user will click on Try here button on Queue Opearations page</div>
+
+
+		</li>
+		<li test-id='100' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_be_on_tryeditor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will be on Tryeditor page</div>
+
+
+		</li>
+		<li test-id='101' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_send_input_and_clicks_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will send input and clicks run</div>
+
+
+		</li>
+		<li test-id='102' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_get_the_output_and_displayed_on_console())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will get the output and displayed on console</div>
+
+
+		</li>
+		<li test-id='103' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_be_navigated_to_the_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will be navigated to the Home page</div>
+
+
+		</li>
+		<li test-id='104' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on home page</div>
+
+
+		</li>
+		<li test-id='105' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_data_structures_intro_get_started_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on DataStructuresIntro get started button</div>
+
+
+		</li>
+		<li test-id='106' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_data_structure_intro_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on DataStructureIntro page</div>
+
+
+		</li>
+		<li test-id='107' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_time_complexity_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Time Complexity button</div>
+
+
+		</li>
+		<li test-id='108' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_time_complexity_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Time complexity page</div>
+
+
+		</li>
+		<li test-id='109' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='110' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_editor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Editor page</div>
+
+
+		</li>
+		<li test-id='111' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enters_python_code_and_clicks_run_button_and_gets_output())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters python code and clicks Run button and gets output</div>
+
+
+		</li>
+		<li test-id='112' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_navigates_back_to_HomePage_from_Editor())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user navigates back to HomePage from Editor</div>
+
+
+		</li>
+		<li test-id='113' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on home page</div>
+
+
+		</li>
+		<li test-id='114' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_data_structures_intro_get_started_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on DataStructuresIntro get started button</div>
+
+
+		</li>
+		<li test-id='115' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_data_structure_intro_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on DataStructureIntro page</div>
+
+
+		</li>
+		<li test-id='116' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_time_complexity_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Time Complexity button</div>
+
+
+		</li>
+		<li test-id='117' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_time_complexity_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Time complexity page</div>
+
+
+		</li>
+		<li test-id='118' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_practice_questions_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Practice Questions button</div>
+
+
+		</li>
+		<li test-id='119' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_practice_questions_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Practice Questions page</div>
+
+
+		</li>
+		<li test-id='120' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_navigates_back_to_home_page_from_practice_questions())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user navigates back to HomePage from PracticeQuestions</div>
+
+
+		</li>
+		<li test-id='121' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on home page</div>
+
+
+		</li>
+		<li test-id='122' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_array_get_started_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Array get started button</div>
+
+
+		</li>
+		<li test-id='123' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_array_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Array page</div>
+
+
+		</li>
+		<li test-id='124' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_arrays_in_python_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Arrays in Python button</div>
+
+
+		</li>
+		<li test-id='125' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_arrays_in_python_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Arrays in Python page</div>
+
+
+		</li>
+		<li test-id='126' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='127' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_editor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Editor page</div>
+
+
+		</li>
+		<li test-id='128' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enters_python_code_and_clicks_run_button_and_gets_output())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters python code and clicks Run button and gets output</div>
+
+
+		</li>
+		<li test-id='129' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_navigates_back_to_HomePage_from_Editor())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user navigates back to HomePage from Editor</div>
+
+
+		</li>
+		<li test-id='130' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on home page</div>
+
+
+		</li>
+		<li test-id='131' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_array_get_started_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Array get started button</div>
+
+
+		</li>
+		<li test-id='132' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_array_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Array page</div>
+
+
+		</li>
+		<li test-id='133' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_arrays_using_list_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Arrays using List button</div>
+
+
+		</li>
+		<li test-id='134' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_arrays_using_list_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Arrays using List page</div>
+
+
+		</li>
+		<li test-id='135' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='136' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_editor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Editor page</div>
+
+
+		</li>
+		<li test-id='137' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enters_python_code_and_clicks_run_button_and_gets_output())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters python code and clicks Run button and gets output</div>
+
+
+		</li>
+		<li test-id='138' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_navigates_back_to_HomePage_from_Editor())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user navigates back to HomePage from Editor</div>
+
+
+		</li>
+		<li test-id='139' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on home page</div>
+
+
+		</li>
+		<li test-id='140' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_array_get_started_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Array get started button</div>
+
+
+		</li>
+		<li test-id='141' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_array_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Array page</div>
+
+
+		</li>
+		<li test-id='142' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_basic_operations_in_list_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Basic Operations in List button</div>
+
+
+		</li>
+		<li test-id='143' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_basic_operations_in_list_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Basic Operations in List page</div>
+
+
+		</li>
+		<li test-id='144' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='145' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_editor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Editor page</div>
+
+
+		</li>
+		<li test-id='146' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enters_python_code_and_clicks_run_button_and_gets_output())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters python code and clicks Run button and gets output</div>
+
+
+		</li>
+		<li test-id='147' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_navigates_back_to_HomePage_from_Editor())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user navigates back to HomePage from Editor</div>
+
+
+		</li>
+		<li test-id='148' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on home page</div>
+
+
+		</li>
+		<li test-id='149' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_array_get_started_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Array get started button</div>
+
+
+		</li>
+		<li test-id='150' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_array_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Array page</div>
+
+
+		</li>
+		<li test-id='151' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_applications_of_array_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Applications of Array button</div>
+
+
+		</li>
+		<li test-id='152' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_applications_of_array_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Applications of Array page</div>
+
+
+		</li>
+		<li test-id='153' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='154' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_editor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Editor page</div>
+
+
+		</li>
+		<li test-id='155' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enters_python_code_and_clicks_run_button_and_gets_output())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters python code and clicks Run button and gets output</div>
+
+
+		</li>
+		<li test-id='156' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_navigates_back_to_HomePage_from_Editor())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user navigates back to HomePage from Editor</div>
+
+
+		</li>
+		<li test-id='157' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on home page</div>
+
+
+		</li>
+		<li test-id='158' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_array_get_started_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Array get started button</div>
+
+
+		</li>
+		<li test-id='159' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_array_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Array page</div>
+
+
+		</li>
+		<li test-id='160' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_applications_of_array_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Applications of Array button</div>
+
+
+		</li>
+		<li test-id='161' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_applications_of_array_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Applications of Array page</div>
+
+
+		</li>
+		<li test-id='162' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_practice_questions_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Practice Questions button</div>
+
+
+		</li>
+		<li test-id='163' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_practice_questions_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on Practice Questions page</div>
+
+
+		</li>
+		<li test-id='164' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_search_the_array_button_in_practice())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Search the Array button in Practice</div>
+
+
+		</li>
+		<li test-id='165' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_question_one_page_in_practice())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on question one page in Practice</div>
+
+
+		</li>
+		<li test-id='166' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enters_python_code_and_clicks_submit_button_and_gets_output())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters python code and clicks Submit button and gets output</div>
+
+
+		</li>
+		<li test-id='167' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_navigates_back_to_practice_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user navigates back to Practice page</div>
+
+
+		</li>
+		<li test-id='168' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_max_consecutive_ones_button_in_practice())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Max Consecutive Ones button in Practice</div>
+
+
+		</li>
+		<li test-id='169' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_question_two_page_in_practice())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on question two page in Practice</div>
+
+
+		</li>
+		<li test-id='170' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enters_python_code_and_clicks_submit_button_and_gets_output())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters python code and clicks Submit button and gets output</div>
+
+
+		</li>
+		<li test-id='171' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_navigates_back_to_practice_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user navigates back to Practice page</div>
+
+
+		</li>
+		<li test-id='172' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_find_numbers_with_even_number_of_digits_button_in_practice())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Find Numbers with Even Number of Digits button in Practice</div>
+
+
+		</li>
+		<li test-id='173' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_question_three_page_in_practice())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on question three page in Practice</div>
+
+
+		</li>
+		<li test-id='174' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enters_python_code_and_clicks_submit_button_and_gets_output())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters python code and clicks Submit button and gets output</div>
+
+
+		</li>
+		<li test-id='175' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_navigates_back_to_practice_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user navigates back to Practice page</div>
+
+
+		</li>
+		<li test-id='176' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_squares_of_a_sorted_array_button_in_practice())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Squares of a Sorted Array button in Practice</div>
+
+
+		</li>
+		<li test-id='177' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_question_four_page_in_practice())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user is on question four page in Practice</div>
+
+
+		</li>
+		<li test-id='178' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enters_python_code_and_clicks_submit_button_and_gets_output())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user enters python code and clicks Submit button and gets output</div>
+
+
+		</li>
+		<li test-id='179' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_navigates_back_to_practice_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user navigates back to Practice page</div>
+
+
+		</li>
+		<li test-id='180' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_navigates_back_to_HomePage_from_Editor())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user navigates back to HomePage from Editor</div>
+
+
+		</li>
+		<li test-id='181' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on home page</div>
+
+
+		</li>
+		<li test-id='182' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_graph_get_started_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Graph Get Started button</div>
+
+
+		</li>
+		<li test-id='183' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_to_graph_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to Graph page</div>
+
+
+		</li>
+		<li test-id='184' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clikcs_on_graph())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clikcs on Graph</div>
+
+
+		</li>
+		<li test-id='185' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='186' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enter_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user enter input</div>
+
+
+		</li>
+		<li test-id='187' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.click_on_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on Run</div>
+
+
+		</li>
+		<li test-id='188' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.Then_it_should_display_entered_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then it should display entered input</div>
+
+
+		</li>
+		<li test-id='189' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user go back to Topic Covered page</div>
+
+
+		</li>
+		<li test-id='190' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_graph_Topic_covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on graph Topic covered page</div>
+
+
+		</li>
+		<li test-id='191' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clikcs_on_Graph_Representations())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clikcs on Graph Representations</div>
+
+
+		</li>
+		<li test-id='192' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='193' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enter_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user enter input</div>
+
+
+		</li>
+		<li test-id='194' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.click_on_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on Run</div>
+
+
+		</li>
+		<li test-id='195' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.Then_it_should_display_entered_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then it should display entered input</div>
+
+
+		</li>
+		<li test-id='196' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_navigate_back_to_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user navigate back to Home Page</div>
+
+
+		</li>
+		<li test-id='197' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on home page</div>
+
+
+		</li>
+		<li test-id='198' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_tree_get_started_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user clicks on Tree GetStarted button</div>
+
+
+		</li>
+		<li test-id='199' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_to_tree_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to Tree page</div>
+
+
+		</li>
+		<li test-id='200' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clikcs_on_overview_of_trees())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clikcs on overview of Trees</div>
+
+
+		</li>
+		<li test-id='201' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='202' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enter_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user enter input</div>
+
+
+		</li>
+		<li test-id='203' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.click_on_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on Run</div>
+
+
+		</li>
+		<li test-id='204' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.Then_it_should_display_entered_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then it should display entered input</div>
+
+
+		</li>
+		<li test-id='205' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user go back to Topic Covered page</div>
+
+
+		</li>
+		<li test-id='206' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_tree_topic_covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on Tree Topic covered page</div>
+
+
+		</li>
+		<li test-id='207' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clikcs_on_terminologies())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clikcs on Terminologies</div>
+
+
+		</li>
+		<li test-id='208' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='209' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enter_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user enter input</div>
+
+
+		</li>
+		<li test-id='210' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.click_on_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on Run</div>
+
+
+		</li>
+		<li test-id='211' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.Then_it_should_display_entered_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then it should display entered input</div>
+
+
+		</li>
+		<li test-id='212' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user go back to Topic Covered page</div>
+
+
+		</li>
+		<li test-id='213' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_tree_topic_covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on Tree Topic covered page</div>
+
+
+		</li>
+		<li test-id='214' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clikcs_on_types_of_trees())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clikcs on Types of Trees</div>
+
+
+		</li>
+		<li test-id='215' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='216' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enter_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user enter input</div>
+
+
+		</li>
+		<li test-id='217' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.click_on_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on Run</div>
+
+
+		</li>
+		<li test-id='218' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.Then_it_should_display_entered_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then it should display entered input</div>
+
+
+		</li>
+		<li test-id='219' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user go back to Topic Covered page</div>
+
+
+		</li>
+		<li test-id='220' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_tree_topic_covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on Tree Topic covered page</div>
+
+
+		</li>
+		<li test-id='221' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clikcs_on_tree_traversals())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clikcs on Tree Traversals</div>
+
+
+		</li>
+		<li test-id='222' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='223' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enter_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user enter input</div>
+
+
+		</li>
+		<li test-id='224' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.click_on_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on Run</div>
+
+
+		</li>
+		<li test-id='225' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.Then_it_should_display_entered_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then it should display entered input</div>
+
+
+		</li>
+		<li test-id='226' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user go back to Topic Covered page</div>
+
+
+		</li>
+		<li test-id='227' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_tree_topic_covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on Tree Topic covered page</div>
+
+
+		</li>
+		<li test-id='228' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clikcs_on_traversals_illustration())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clikcs on Traversals-Illustration</div>
+
+
+		</li>
+		<li test-id='229' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='230' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enter_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user enter input</div>
+
+
+		</li>
+		<li test-id='231' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.click_on_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on Run</div>
+
+
+		</li>
+		<li test-id='232' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.Then_it_should_display_entered_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then it should display entered input</div>
+
+
+		</li>
+		<li test-id='233' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user go back to Topic Covered page</div>
+
+
+		</li>
+		<li test-id='234' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_tree_topic_covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on Tree Topic covered page</div>
+
+
+		</li>
+		<li test-id='235' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clikcs_on_binary_trees())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clikcs on Binary Trees</div>
+
+
+		</li>
+		<li test-id='236' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='237' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enter_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user enter input</div>
+
+
+		</li>
+		<li test-id='238' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.click_on_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on Run</div>
+
+
+		</li>
+		<li test-id='239' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.Then_it_should_display_entered_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then it should display entered input</div>
+
+
+		</li>
+		<li test-id='240' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user go back to Topic Covered page</div>
+
+
+		</li>
+		<li test-id='241' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_tree_topic_covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on Tree Topic covered page</div>
+
+
+		</li>
+		<li test-id='242' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clikcs_on_types_of_binary_trees())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clikcs on Types of Binary Trees</div>
+
+
+		</li>
+		<li test-id='243' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='244' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enter_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user enter input</div>
+
+
+		</li>
+		<li test-id='245' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.click_on_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on Run</div>
+
+
+		</li>
+		<li test-id='246' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.Then_it_should_display_entered_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then it should display entered input</div>
+
+
+		</li>
+		<li test-id='247' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user go back to Topic Covered page</div>
+
+
+		</li>
+		<li test-id='248' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_tree_topic_covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on Tree Topic covered page</div>
+
+
+		</li>
+		<li test-id='249' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clikcs_on_implementation_in_python())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clikcs on Implementation in Python</div>
+
+
+		</li>
+		<li test-id='250' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='251' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enter_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user enter input</div>
+
+
+		</li>
+		<li test-id='252' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.click_on_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on Run</div>
+
+
+		</li>
+		<li test-id='253' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.Then_it_should_display_entered_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then it should display entered input</div>
+
+
+		</li>
+		<li test-id='254' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user go back to Topic Covered page</div>
+
+
+		</li>
+		<li test-id='255' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_tree_topic_covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on Tree Topic covered page</div>
+
+
+		</li>
+		<li test-id='256' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clikcs_on_binary_tree_traversals())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clikcs on Binary Tree Traversals</div>
+
+
+		</li>
+		<li test-id='257' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='258' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enter_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user enter input</div>
+
+
+		</li>
+		<li test-id='259' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.click_on_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on Run</div>
+
+
+		</li>
+		<li test-id='260' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.Then_it_should_display_entered_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then it should display entered input</div>
+
+
+		</li>
+		<li test-id='261' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user go back to Topic Covered page</div>
+
+
+		</li>
+		<li test-id='262' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_tree_topic_covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on Tree Topic covered page</div>
+
+
+		</li>
+		<li test-id='263' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clikcs_on_implementation_of_binary_trees())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clikcs on Implementation of Binary Trees</div>
+
+
+		</li>
+		<li test-id='264' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='265' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enter_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user enter input</div>
+
+
+		</li>
+		<li test-id='266' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.click_on_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on Run</div>
+
+
+		</li>
+		<li test-id='267' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.Then_it_should_display_entered_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then it should display entered input</div>
+
+
+		</li>
+		<li test-id='268' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user go back to Topic Covered page</div>
+
+
+		</li>
+		<li test-id='269' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_tree_topic_covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on Tree Topic covered page</div>
+
+
+		</li>
+		<li test-id='270' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clikcs_on_applications_of_binary_trees())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clikcs on Applications of Binary trees</div>
+
+
+		</li>
+		<li test-id='271' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='272' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enter_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user enter input</div>
+
+
+		</li>
+		<li test-id='273' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.click_on_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on Run</div>
+
+
+		</li>
+		<li test-id='274' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.Then_it_should_display_entered_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then it should display entered input</div>
+
+
+		</li>
+		<li test-id='275' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user go back to Topic Covered page</div>
+
+
+		</li>
+		<li test-id='276' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_tree_topic_covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on Tree Topic covered page</div>
+
+
+		</li>
+		<li test-id='277' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clikcs_on_binary_search_trees())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clikcs on Binary Search Trees</div>
+
+
+		</li>
+		<li test-id='278' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='279' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enter_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user enter input</div>
+
+
+		</li>
+		<li test-id='280' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.click_on_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on Run</div>
+
+
+		</li>
+		<li test-id='281' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.Then_it_should_display_entered_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then it should display entered input</div>
+
+
+		</li>
+		<li test-id='282' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_go_back_to_Topic_Covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user go back to Topic Covered page</div>
+
+
+		</li>
+		<li test-id='283' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_tree_topic_covered_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on Tree Topic covered page</div>
+
+
+		</li>
+		<li test-id='284' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clikcs_on_implementation_of_bst())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clikcs on Implementation Of BST</div>
+
+
+		</li>
+		<li test-id='285' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_try_here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then clicks on Try here button</div>
+
+
+		</li>
+		<li test-id='286' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enter_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user enter input</div>
+
+
+		</li>
+		<li test-id='287' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.click_on_run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on Run</div>
+
+
+		</li>
+		<li test-id='288' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.Then_it_should_display_entered_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then it should display entered input</div>
+
+
+		</li>
+		<li test-id='289' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_navigate_back_to_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user navigate back to Home Page</div>
+
+
+		</li>
+		<li test-id='290' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_is_on_the_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given user is on the home page</div>
+
+
+		</li>
+		<li test-id='291' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_GetStarted_button_for_LinkedList())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on GetStarted button for LinkedList</div>
+
+
+		</li>
+		<li test-id='292' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_to_LinkedList_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to LinkedList page</div>
+
+
+		</li>
+		<li test-id='293' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_Introduction_link())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Introduction link</div>
+
+
+		</li>
+		<li test-id='294' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_to_LinkedList_Subpage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to Linkedlist Subpage</div>
+
+
+		</li>
+		<li test-id='295' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_Try_Here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Try Here button</div>
+
+
+		</li>
+		<li test-id='296' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_tryEditor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to tryEditor page</div>
+
+
+		</li>
+		<li test-id='297' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enters_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user enters input</div>
+
+
+		</li>
+		<li test-id='298' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_Run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clicks on Run</div>
+
+
+		</li>
+		<li test-id='299' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_see_result_of_code())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should see result of code</div>
+
+
+		</li>
+		<li test-id='300' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_go_back_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on go back button</div>
+
+
+		</li>
+		<li test-id='301' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_to_LinkedList_Subpage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to Linkedlist Subpage</div>
+
+
+		</li>
+		<li test-id='302' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_Creating_a_LinkedList_link())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Creating a LinkedList link</div>
+
+
+		</li>
+		<li test-id='303' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_Try_Here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Try Here button</div>
+
+
+		</li>
+		<li test-id='304' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_tryEditor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to tryEditor page</div>
+
+
+		</li>
+		<li test-id='305' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enters_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user enters input</div>
+
+
+		</li>
+		<li test-id='306' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_Run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clicks on Run</div>
+
+
+		</li>
+		<li test-id='307' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_see_result_of_code())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should see result of code</div>
+
+
+		</li>
+		<li test-id='308' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_go_back_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on go back button</div>
+
+
+		</li>
+		<li test-id='309' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_to_LinkedList_Subpage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to Linkedlist Subpage</div>
+
+
+		</li>
+		<li test-id='310' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_Types_of_Linked_List_link())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Types of Linked List link</div>
+
+
+		</li>
+		<li test-id='311' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_Try_Here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Try Here button</div>
+
+
+		</li>
+		<li test-id='312' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_tryEditor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to tryEditor page</div>
+
+
+		</li>
+		<li test-id='313' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enters_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user enters input</div>
+
+
+		</li>
+		<li test-id='314' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_Run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clicks on Run</div>
+
+
+		</li>
+		<li test-id='315' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_see_result_of_code())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should see result of code</div>
+
+
+		</li>
+		<li test-id='316' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_go_back_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on go back button</div>
+
+
+		</li>
+		<li test-id='317' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_to_LinkedList_Subpage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to Linkedlist Subpage</div>
+
+
+		</li>
+		<li test-id='318' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_Implement_Linked_List_in_Python_link())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Implement Linked List in Python link</div>
+
+
+		</li>
+		<li test-id='319' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_Try_Here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Try Here button</div>
+
+
+		</li>
+		<li test-id='320' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_tryEditor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to tryEditor page</div>
+
+
+		</li>
+		<li test-id='321' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enters_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user enters input</div>
+
+
+		</li>
+		<li test-id='322' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_Run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clicks on Run</div>
+
+
+		</li>
+		<li test-id='323' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_see_result_of_code())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should see result of code</div>
+
+
+		</li>
+		<li test-id='324' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_go_back_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on go back button</div>
+
+
+		</li>
+		<li test-id='325' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_to_LinkedList_Subpage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to Linkedlist Subpage</div>
+
+
+		</li>
+		<li test-id='326' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_Traversal_link())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Traversal link</div>
+
+
+		</li>
+		<li test-id='327' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_Try_Here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Try Here button</div>
+
+
+		</li>
+		<li test-id='328' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_tryEditor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to tryEditor page</div>
+
+
+		</li>
+		<li test-id='329' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enters_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user enters input</div>
+
+
+		</li>
+		<li test-id='330' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_Run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clicks on Run</div>
+
+
+		</li>
+		<li test-id='331' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_see_result_of_code())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should see result of code</div>
+
+
+		</li>
+		<li test-id='332' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_go_back_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on go back button</div>
+
+
+		</li>
+		<li test-id='333' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_to_LinkedList_Subpage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to Linkedlist Subpage</div>
+
+
+		</li>
+		<li test-id='334' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_Insertion_link())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Insertion link</div>
+
+
+		</li>
+		<li test-id='335' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_Try_Here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Try Here button</div>
+
+
+		</li>
+		<li test-id='336' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_tryEditor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to tryEditor page</div>
+
+
+		</li>
+		<li test-id='337' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enters_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user enters input</div>
+
+
+		</li>
+		<li test-id='338' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_Run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clicks on Run</div>
+
+
+		</li>
+		<li test-id='339' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_see_result_of_code())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should see result of code</div>
+
+
+		</li>
+		<li test-id='340' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_go_back_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on go back button</div>
+
+
+		</li>
+		<li test-id='341' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_to_LinkedList_Subpage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to Linkedlist Subpage</div>
+
+
+		</li>
+		<li test-id='342' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_Deletion_link())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Deletion link</div>
+
+
+		</li>
+		<li test-id='343' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_Try_Here_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And user clicks on Try Here button</div>
+
+
+		</li>
+		<li test-id='344' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_tryEditor_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to tryEditor page</div>
+
+
+		</li>
+		<li test-id='345' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_enters_input())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user enters input</div>
+
+
+		</li>
+		<li test-id='346' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.clicks_on_Run())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clicks on Run</div>
+
+
+		</li>
+		<li test-id='347' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_see_result_of_code())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should see result of code</div>
+
+
+		</li>
+		<li test-id='348' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_go_back_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on go back button</div>
+
+
+		</li>
+		<li test-id='349' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_to_LinkedList_Subpage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to Linkedlist Subpage</div>
+
+
+		</li>
+		<li test-id='350' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_on_Practice_Questions_link())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks on Practice Questions link</div>
+
+
+		</li>
+		<li test-id='351' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_to_Practice_Questions_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to Practice Questions page</div>
+
+
+		</li>
+		<li test-id='352' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_clicks_NumpyNinja_link())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When user clicks NumpyNinja link</div>
+
+
+		</li>
+		<li test-id='353' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_should_navigate_to_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user should navigate to home page</div>
+
+
+		</li>
+		<li test-id='354' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(StepDefinitions.Integrate.user_will_click_on_signout_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then user will click on Signout button</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Register</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Oct 19, 2022 12:15:27</td>
+										<td class='linked' test-id='2'>Register the Account in the website</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Oct 19, 2022 12:15:27</td>
+										<td class='linked' test-id='3'>Register the Account in the website</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Login</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Oct 19, 2022 12:15:34</td>
+										<td class='linked' test-id='17'>Signin the website</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Oct 19, 2022 12:15:34</td>
+										<td class='linked' test-id='18'>Signin the website</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>3</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>3</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>336</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Oct 19, 2022 12:15:26</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Oct 19, 2022 12:17:17</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>00 01 51.073</div>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Skipped</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@Register</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Login</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 3,
+				passParent: 3,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				childCount: 3,
+				passChild: 3,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				grandChildCount: 336,
+				passGrandChild: 336,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+			};
+			</script>
+		
+		<script>
+			var timeline = {
+			        "Feature file to register account on the website":7.013,"Feature file of Login Functionality":8.078,"Feature for different data stuctures validation":94.613
+			};
+		</script>
+		
+		  <script src='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		
+		
+		<script type='text/javascript'>
+				
+		</script> 
+
+	</body>
+</html>

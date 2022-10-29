@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="110.261">
+    <testcase classname="Feature file to register account on the website" name="Register the Account in the website" time="7.084">
+        <system-out><![CDATA[Given user opens the GetStarted page........................................passed
+When user clicks on GetStarted button.......................................passed
+Then User is on the Home Page...............................................passed
+When user will click on Register link.......................................passed
+Then user will be navigated to the Register page............................passed
+When Enter the username Sushyolloyoo and Sushmita09olyoop  and Sushmita09olyoop.passed
+And Click on register button................................................passed
+Then The user will navigate to the Home page................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Feature file of Login Functionality" name="Signin the website" time="8.081">
+        <system-out><![CDATA[Given user will be on GetStarted page.......................................passed
+When user clicks on GetStarted..............................................passed
+Then User navigated to the Home Page........................................passed
+When user is now on Home page...............................................passed
+When user clicks on the Signin..............................................passed
+And user gets the title of the page.........................................passed
+When user enters Username as Sush and Password as Sushmita09................passed
+And clicks on login button..................................................passed
+Then user will be logged In.................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Feature for different data stuctures validation" name="Operations in Stack of Stack page" time="94.623">
+        <system-out><![CDATA[Given user opens the GetStarted page........................................passed
+When user clicks on GetStarted button.......................................passed
+Then User navigated to the Home Page........................................passed
+When user is now on Home page...............................................passed
+And user clicks on the Signin...............................................passed
+And user gets the title of the page.........................................passed
+When user enters Username as Sush and Password as Sushmita09................passed
+And clicks on login button..................................................passed
+Then user will be logged In.................................................passed
+Given user is now on HP.....................................................passed
+When user clicks on GetStarted button of Stack..............................passed
+Given User is on Stack page.................................................passed
+When user clicks on Operations in Stack.....................................passed
+Then user must be navigated to the Operations in Stack page.................passed
+When user clicks tryhere button of Operations in stack page.................passed
+Then user will be on Try Editor page........................................passed
+When user will send the input...............................................passed
+And click run...............................................................passed
+Then display the output.....................................................passed
+Then navigate back to Stack page............................................passed
+Given user will be on Stack page............................................passed
+When user clicks on Implementation link.....................................passed
+Then user will be navigated to the Implementation page......................passed
+When user clicks on Try here button of Implentation page....................passed
+Then user is on TryEditor page..............................................passed
+When user will send the data as input and click run.........................passed
+Then user will display the output on the console............................passed
+Then user will navigate to Stack page.......................................passed
+Given user is now on page Stack.............................................passed
+When user clicks on Applications link.......................................passed
+Then user is now on Applications page.......................................passed
+When user will click on Try Here button.....................................passed
+When user will execute try editor page......................................passed
+Then will get the output on the console.....................................passed
+Then user will navigate to Home page........................................passed
+Given user is now on home page..............................................passed
+When user clicks on GetStarted button of Queue..............................passed
+Then user will be navigated to Queue page...................................passed
+When user clicks on Implimentation of Queue in python.......................passed
+Then user will be navigated to Implimentation of Queue in python page.......passed
+When user clicks on try button..............................................passed
+Then user will send the input and click run.................................passed
+Then user will get the output displayed on console..........................passed
+Then user will be navigated back to Queue page..............................passed
+Given user will be on Queue page............................................passed
+When user will click on Implementation using collections dequeue............passed
+Then user will be navigated to Implementation using collections dequeue page.passed
+When user  will click on Try here button of Collections dequeue page........passed
+Then user will be navigated to the Try Editor page..........................passed
+When user will give the input and click run.................................passed
+Then user will display output...............................................passed
+Then user will navigate to Queue page.......................................passed
+Given user is on Queue page.................................................passed
+When user will click on Implementation using Array..........................passed
+Then user will be navigated to the Implementation Using Array page..........passed
+When click on Try here button...............................................passed
+Then user is navigated to the Try Editor page...............................passed
+When user give input data and click run.....................................passed
+Then user will receive output and display the output........................passed
+Then user navigates back to Queue page......................................passed
+Given user is now on Queue page.............................................passed
+When user will click on Queue Operations....................................passed
+Then user is navigated to Queue Operations page.............................passed
+When user will click on Try here button on Queue Opearations page...........passed
+Then user will be on Tryeditor page.........................................passed
+Then user will send input and clicks run....................................passed
+Then user will get the output and displayed on console......................passed
+Then user will be navigated to the Home page................................passed
+Given user is on home page..................................................passed
+When user clicks on DataStructuresIntro get started button..................passed
+Then user is on DataStructureIntro page.....................................passed
+And user clicks on Time Complexity button...................................passed
+Then user is on Time complexity page........................................passed
+And user clicks on Try here button..........................................passed
+Then user is on Editor page.................................................passed
+And user enters python code and clicks Run button and gets output...........passed
+Then user navigates back to HomePage from Editor............................passed
+Given user is on home page..................................................passed
+When user clicks on DataStructuresIntro get started button..................passed
+Then user is on DataStructureIntro page.....................................passed
+And user clicks on Time Complexity button...................................passed
+Then user is on Time complexity page........................................passed
+And user clicks on Practice Questions button................................passed
+Then user is on Practice Questions page.....................................passed
+Then user navigates back to HomePage from PracticeQuestions.................passed
+Given user is on home page..................................................passed
+When user clicks on Array get started button................................passed
+Then user is on Array page..................................................passed
+And user clicks on Arrays in Python button..................................passed
+Then user is on Arrays in Python page.......................................passed
+And user clicks on Try here button..........................................passed
+Then user is on Editor page.................................................passed
+And user enters python code and clicks Run button and gets output...........passed
+Then user navigates back to HomePage from Editor............................passed
+Given user is on home page..................................................passed
+When user clicks on Array get started button................................passed
+Then user is on Array page..................................................passed
+And user clicks on Arrays using List button.................................passed
+Then user is on Arrays using List page......................................passed
+And user clicks on Try here button..........................................passed
+Then user is on Editor page.................................................passed
+And user enters python code and clicks Run button and gets output...........passed
+Then user navigates back to HomePage from Editor............................passed
+Given user is on home page..................................................passed
+When user clicks on Array get started button................................passed
+Then user is on Array page..................................................passed
+And user clicks on Basic Operations in List button..........................passed
+Then user is on Basic Operations in List page...............................passed
+And user clicks on Try here button..........................................passed
+Then user is on Editor page.................................................passed
+And user enters python code and clicks Run button and gets output...........passed
+Then user navigates back to HomePage from Editor............................passed
+Given user is on home page..................................................passed
+When user clicks on Array get started button................................passed
+Then user is on Array page..................................................passed
+And user clicks on Applications of Array button.............................passed
+Then user is on Applications of Array page..................................passed
+And user clicks on Try here button..........................................passed
+Then user is on Editor page.................................................passed
+And user enters python code and clicks Run button and gets output...........passed
+Then user navigates back to HomePage from Editor............................passed
+Given user is on home page..................................................passed
+When user clicks on Array get started button................................passed
+Then user is on Array page..................................................passed
+And user clicks on Applications of Array button.............................passed
+Then user is on Applications of Array page..................................passed
+And user clicks on Practice Questions button................................passed
+Then user is on Practice Questions page.....................................passed
+And user clicks on Search the Array button in Practice......................passed
+Then user is on question one page in Practice...............................passed
+And user enters python code and clicks Submit button and gets output........passed
+Then user navigates back to Practice page...................................passed
+And user clicks on Max Consecutive Ones button in Practice..................passed
+Then user is on question two page in Practice...............................passed
+And user enters python code and clicks Submit button and gets output........passed
+Then user navigates back to Practice page...................................passed
+And user clicks on Find Numbers with Even Number of Digits button in Practice.passed
+Then user is on question three page in Practice.............................passed
+And user enters python code and clicks Submit button and gets output........passed
+Then user navigates back to Practice page...................................passed
+And user clicks on Squares of a Sorted Array button in Practice.............passed
+Then user is on question four page in Practice..............................passed
+And user enters python code and clicks Submit button and gets output........passed
+Then user navigates back to Practice page...................................passed
+Then user navigates back to HomePage from Editor............................passed
+Given user is on home page..................................................passed
+When user clicks on Graph Get Started button................................passed
+Then user should navigate to Graph page.....................................passed
+And user clikcs on Graph....................................................passed
+Then clicks on Try here button..............................................passed
+Then user enter input.......................................................passed
+And click on Run............................................................passed
+Then it should display entered input........................................passed
+Then user go back to Topic Covered page.....................................passed
+Given user is on graph Topic covered page...................................passed
+When user clikcs on Graph Representations...................................passed
+Then clicks on Try here button..............................................passed
+Then user enter input.......................................................passed
+And click on Run............................................................passed
+Then it should display entered input........................................passed
+Then user navigate back to Home Page........................................passed
+Given user is on home page..................................................passed
+Then user clicks on Tree GetStarted button..................................passed
+Then user should navigate to Tree page......................................passed
+And user clikcs on overview of Trees........................................passed
+Then clicks on Try here button..............................................passed
+Then user enter input.......................................................passed
+And click on Run............................................................passed
+Then it should display entered input........................................passed
+Then user go back to Topic Covered page.....................................passed
+Given user is on Tree Topic covered page....................................passed
+When user clikcs on Terminologies...........................................passed
+Then clicks on Try here button..............................................passed
+Then user enter input.......................................................passed
+And click on Run............................................................passed
+Then it should display entered input........................................passed
+Then user go back to Topic Covered page.....................................passed
+Given user is on Tree Topic covered page....................................passed
+When user clikcs on Types of Trees..........................................passed
+Then clicks on Try here button..............................................passed
+Then user enter input.......................................................passed
+And click on Run............................................................passed
+Then it should display entered input........................................passed
+Then user go back to Topic Covered page.....................................passed
+Given user is on Tree Topic covered page....................................passed
+When user clikcs on Tree Traversals.........................................passed
+Then clicks on Try here button..............................................passed
+Then user enter input.......................................................passed
+And click on Run............................................................passed
+Then it should display entered input........................................passed
+Then user go back to Topic Covered page.....................................passed
+Given user is on Tree Topic covered page....................................passed
+When user clikcs on Traversals-Illustration.................................passed
+Then clicks on Try here button..............................................passed
+Then user enter input.......................................................passed
+And click on Run............................................................passed
+Then it should display entered input........................................passed
+Then user go back to Topic Covered page.....................................passed
+Given user is on Tree Topic covered page....................................passed
+When user clikcs on Binary Trees............................................passed
+Then clicks on Try here button..............................................passed
+Then user enter input.......................................................passed
+And click on Run............................................................passed
+Then it should display entered input........................................passed
+Then user go back to Topic Covered page.....................................passed
+Given user is on Tree Topic covered page....................................passed
+When user clikcs on Types of Binary Trees...................................passed
+Then clicks on Try here button..............................................passed
+Then user enter input.......................................................passed
+And click on Run............................................................passed
+Then it should display entered input........................................passed
+Then user go back to Topic Covered page.....................................passed
+Given user is on Tree Topic covered page....................................passed
+When user clikcs on Implementation in Python................................passed
+Then clicks on Try here button..............................................passed
+Then user enter input.......................................................passed
+And click on Run............................................................passed
+Then it should display entered input........................................passed
+Then user go back to Topic Covered page.....................................passed
+Given user is on Tree Topic covered page....................................passed
+When user clikcs on Binary Tree Traversals..................................passed
+Then clicks on Try here button..............................................passed
+Then user enter input.......................................................passed
+And click on Run............................................................passed
+Then it should display entered input........................................passed
+Then user go back to Topic Covered page.....................................passed
+Given user is on Tree Topic covered page....................................passed
+When user clikcs on Implementation of Binary Trees..........................passed
+Then clicks on Try here button..............................................passed
+Then user enter input.......................................................passed
+And click on Run............................................................passed
+Then it should display entered input........................................passed
+Then user go back to Topic Covered page.....................................passed
+Given user is on Tree Topic covered page....................................passed
+When user clikcs on Applications of Binary trees............................passed
+Then clicks on Try here button..............................................passed
+Then user enter input.......................................................passed
+And click on Run............................................................passed
+Then it should display entered input........................................passed
+Then user go back to Topic Covered page.....................................passed
+Given user is on Tree Topic covered page....................................passed
+When user clikcs on Binary Search Trees.....................................passed
+Then clicks on Try here button..............................................passed
+Then user enter input.......................................................passed
+And click on Run............................................................passed
+Then it should display entered input........................................passed
+Then user go back to Topic Covered page.....................................passed
+Given user is on Tree Topic covered page....................................passed
+When user clikcs on Implementation Of BST...................................passed
+Then clicks on Try here button..............................................passed
+Then user enter input.......................................................passed
+And click on Run............................................................passed
+Then it should display entered input........................................passed
+Then user navigate back to Home Page........................................passed
+Given user is on the home page..............................................passed
+When user clicks on GetStarted button for LinkedList........................passed
+Then user should navigate to LinkedList page................................passed
+When user clicks on Introduction link.......................................passed
+Then user should navigate to Linkedlist Subpage.............................passed
+When user clicks on Try Here button.........................................passed
+Then user should navigate to tryEditor page.................................passed
+When user enters input......................................................passed
+And clicks on Run...........................................................passed
+Then user should see result of code.........................................passed
+When user clicks on go back button..........................................passed
+Then user should navigate to Linkedlist Subpage.............................passed
+When user clicks on Creating a LinkedList link..............................passed
+And user clicks on Try Here button..........................................passed
+Then user should navigate to tryEditor page.................................passed
+When user enters input......................................................passed
+And clicks on Run...........................................................passed
+Then user should see result of code.........................................passed
+When user clicks on go back button..........................................passed
+Then user should navigate to Linkedlist Subpage.............................passed
+When user clicks on Types of Linked List link...............................passed
+And user clicks on Try Here button..........................................passed
+Then user should navigate to tryEditor page.................................passed
+When user enters input......................................................passed
+And clicks on Run...........................................................passed
+Then user should see result of code.........................................passed
+When user clicks on go back button..........................................passed
+Then user should navigate to Linkedlist Subpage.............................passed
+When user clicks on Implement Linked List in Python link....................passed
+And user clicks on Try Here button..........................................passed
+Then user should navigate to tryEditor page.................................passed
+When user enters input......................................................passed
+And clicks on Run...........................................................passed
+Then user should see result of code.........................................passed
+When user clicks on go back button..........................................passed
+Then user should navigate to Linkedlist Subpage.............................passed
+When user clicks on Traversal link..........................................passed
+And user clicks on Try Here button..........................................passed
+Then user should navigate to tryEditor page.................................passed
+When user enters input......................................................passed
+And clicks on Run...........................................................passed
+Then user should see result of code.........................................passed
+When user clicks on go back button..........................................passed
+Then user should navigate to Linkedlist Subpage.............................passed
+When user clicks on Insertion link..........................................passed
+And user clicks on Try Here button..........................................passed
+Then user should navigate to tryEditor page.................................passed
+When user enters input......................................................passed
+And clicks on Run...........................................................passed
+Then user should see result of code.........................................passed
+When user clicks on go back button..........................................passed
+Then user should navigate to Linkedlist Subpage.............................passed
+When user clicks on Deletion link...........................................passed
+And user clicks on Try Here button..........................................passed
+Then user should navigate to tryEditor page.................................passed
+When user enters input......................................................passed
+And clicks on Run...........................................................passed
+Then user should see result of code.........................................passed
+When user clicks on go back button..........................................passed
+Then user should navigate to Linkedlist Subpage.............................passed
+When user clicks on Practice Questions link.................................passed
+Then user should navigate to Practice Questions page........................passed
+When user clicks NumpyNinja link............................................passed
+Then user should navigate to home page......................................passed
+Then user will click on Signout button......................................passed
+]]></system-out>
+    </testcase>
+</testsuite>

@@ -1,0 +1,14 @@
+2022-10-19 12:10:328 INFO  LoggerHelper:47 - chrome browser is initialized
+2022-10-19 12:10:352 INFO  LoggerHelper:47 - chrome browser is initialized
+2022-10-19 12:10:691 INFO  LoggerHelper:47 - chrome browser is initialized
+2022-10-19 12:10:214 INFO  LoggerHelper:47 - chrome browser is initialized
+2022-10-19 12:10:755 INFO  LoggerHelper:47 - chrome browser is initialized
+2022-10-19 12:10:419 INFO  LoggerHelper:47 - chrome browser is initialized
+2022-10-19 12:10:742 INFO  LoggerHelper:79 - user will be on GetStarted button of stack
+2022-10-19 12:10:768 INFO  LoggerHelper:91 - User will be on Stack Page
+2022-10-19 12:10:296 INFO  LoggerHelper:98 - User clicks on operations in Stack
+2022-10-19 12:10:313 INFO  LoggerHelper:108 - user will be navigated to operations in stack page
+2022-10-19 12:10:584 INFO  LoggerHelper:116 - User clicks on Try here button
+2022-10-19 12:10:917 INFO  LoggerHelper:132 - user will send the input and clicks on run
+2022-10-19 12:10:61 INFO  LoggerHelper:149 - user will display the output on the console
+2022-10-19 12:10:222 INFO  LoggerHelper:158 - User will navigate back to the stack page
